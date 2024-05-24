@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <style>
+        body{
+            font-size: 1.5rem;
+            max-width: 1200px;
+            margin: auto;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* display: flex;
+            flex-direction: column;
+            justify-content: start; */
+        }
+        #navigator{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #navigator>a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 5px 15px;
+            user-select: none;
+            text-decoration: none;
+            background-color: #1f1f1f;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+        #navigator>a:hover{
+            background-color: #696969;
+        }
+        #eventName{
+            font-size: 3rem;
+            margin: auto;
+            width: fit-content;
+        }
+        #heats, #lanes{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 15px auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+        #heats>div, #lanes>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px 15px;
+            margin: 10px 15px;
+            border: 2px solid white;
+            color: white;
+            background-color: black;
+            user-select: none;
+            cursor: pointer;
+        }
+        #timer{
+            margin-left: 15px;
+        }
+
+    </style>
+    <div id="loading"> Loading ... </div>
+    <div id="eventName"></div>
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <div id="navigator">
+        <a href="judgeSwim/">Judge Swim</a>
+        <a href="judgeRun/">Judge Run</a>
+        <a href="controlPanel/" target="_blank">Control Panel</a>
+        <a href="checkin.php">Check In</a>
+        <a href="../huntingStart/" target="_blank">Hunting Start</a>
+    </div>
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <div style="display: flex; flex-direction: row;">Timer: <div id="timer"></div></div>
+    <div id="heats"></div>
+    <div id="lanes"></div>
+    <div>
+        <button id="start">Start in 10</button>
+        <button id="end">End Heat</button>
+    </div>    
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <div id="runPanel">
+        [h:m:s] <br>
+        <input type="text" id="runStartTime" placeholder="Start Time Run"><br>
+        <input type="text" id="huntPeriod" placeholder="Huntingstart Period"><br>
+        <input type="text" id="intervalTime" placeholder="Intervalstart Intervals"><br>
+        <button id="generateRunStartTime"> Generate Start Times</button>
+        <br><br>
+        <p>NB: <i>Start Time Run is the time until the first contestant will start, not the clock start time</i></p>
+    </div>
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <button id="clearCache">Clear Session Data</button>
+    <script src="admin.js"></script>
+</body>
+</html>

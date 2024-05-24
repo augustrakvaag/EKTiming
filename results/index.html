@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Resultater</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div id="event"></div>
+    <button id="refresh">Refresh</button>
+    <button id="download">Download [Exel]</button>
+    <br>
+    <select id="heats"></select>
+    <br>
+    <div style="font-size: 1rem;"> Show Names: <input type="checkbox" id="names"> </div>
+    <div style="font-size: 1rem;"> Show Placement: <input type="checkbox" id="placement"></div>
+    <div id="resultsTable">
+        <div class="tableLine" style="background-color: rgba(0,0,0,0.3); border-top: none;">
+            <div class="tableLinePlacement" id="showPlacement">Place</div>
+            <div class="tableLineStartNr" id="sortByStartNr">Start Nr.</div>
+            <div class="tableLineName" id="sortByName">Name</div>
+            <div class="tableLineSwimTime" id="sortBySwimTime">Swim Time</div>
+            <div class="tableLineRunTime" id="sortByRunTime">Run Time</div>
+            <div class="tableLineTotalTime" id="sortByTime">Time Total</div>
+        </div>
+        <div id="resultsTableContent"></div>
+    </div>
+    <script src="results.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{ 
+    font-size: 2rem; 
+    margin: 0px;
+    padding: 10px;
+}
+
+#resultsTable{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid black;
+    width: fit-content;
+    min-width: 500px;
+}
+#resultsTableContent > *:nth-child(odd){
+    background-color: rgba(0,0,255, 0.2);
+}
+.tableLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-top: 1px solid black;
+}
+.tableLine>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    min-width: 100px;
+    white-space: nowrap;
+    padding: 5px 15px;
+    border-right: 1px solid black;
+    overflow: hidden;
+}
+
+.tableLinePlacement, .tableLineStartNr{
+    width: 130px !important;
+}
+
+.tableLineName{
+    width: 300px;
+    text-align: left !important;
+}
+
+.tableLineSwimTime, .tableLineRunTime, .tableLineTotalTime{
+    width: 150px !important;
+}   
+.tableLineTotalTime{
+    border-right: 0px solid rgba(0,0,0,0) !important;
+}
+
+#sortByName, #sortBySwimTime, #sortByRunTime, #sortByTime, #sortByStartNr{
+    cursor: pointer;
+}
+
+#sortByName:hover, #sortBySwimTime:hover, #sortByRunTime:hover, #sortByTime:hover, #sortByStartNr:hover{
+    background-color: rgba(255,255,255,0.5);
+}

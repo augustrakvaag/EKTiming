@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <style>
+        body{
+            font-size: 1.5rem;
+            max-width: 1200px;
+            margin: auto;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="event"></h2>
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <!-- Advanced <input type="checkbox" id="advanced"> -->
+    <div id="contestants"></div>
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <input id="name" type="text" placeholder="Name">
+    <button id="add">Add</button>
+    <!--
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    <input type="text" id="heats" placeholder="Heat Names">
+    <input type="text" id="lanes" placeholder="Lane Numbers">
+    <button id="createHeatLanes">Create Heat and Lanes</button>
+    -->
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    [dblclick]<br>
+    <button id="resetSwim">RESET SWIM</button>
+    <button id="resetRun">RESET RUN</button><br>
+    <div style="width: 100%; margin: 15px auto; border-bottom: 1px solid black;"></div>
+    Manual Time Registration <br>
+    Start Nr: <input id="manual_startNr" type="number"> <br>
+    Swim Time [h:m:s] <input id="manual_swimTime" type="text"> <button id="manual_swimBT">Set Swim Time</button><br>
+    Run Time [h:m:s] <input id="manual_runTime" type="text"> <button id="manual_runBT">Set Run Time</button><br>
+    
+    <!--<input type="text" id="password" placeholder="password">
+    <button id="setPassword">SET</button>-->
+    <script src="controls.js"></script>
+</body>
+</html>
